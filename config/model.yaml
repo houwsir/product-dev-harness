@@ -1,0 +1,17 @@
+# ============================================================
+# 模型配置 —— 全 Agent 唯一模型装配点，改这里即全局生效
+# ============================================================
+
+# 前四角色模型（产品经理 / 需求分析 / 技术方案 / 测试）
+# 使用 langchain-deepseek 的 ChatDeepSeek 驱动
+model: deepseek-chat
+api_base: https://api.deepseek.com
+temperature: 0.7
+max_tokens: 16000
+
+# 开发角色模型（经 DeepSeek Harness SDK 驱动）
+# DSH 本体是一个 coding agent，自带 bash 工具循环
+dsh_model: deepseek-v4-flash
+dsh_provider: deepseek-official
+dsh_max_tokens: 49152
+dsh_profile: sdk-minimal
